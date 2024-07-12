@@ -7,47 +7,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
 
+    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matthew Merioles Portfolio</title>
+    <title>Matthew Merioles</title>
+    <link rel="icon" type="image/x-icon" href="./assets/placeholder.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 
 <body class="fade-in">
     <nav id="desktop-nav">
-        <div class="logo " tr="tr_name">Matthew Merioles</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about" tr="tr_about" >About</a></li>
                 <li><a href="#experience" tr="tr_experience" >Experience</a></li>
                 <li><a href="#projects" tr="tr_projects" >Projects</a></li>
+                <li><a href='https://scrapbox.io/mattlab/' tr="tr_blog" >Blog</a></li>
                 <li><a href="#contact" tr="tr_contact" >Contact</a></li>
             </ul>
         </div>
     </nav>
+    
     <nav id = "hamburger-nav">
-        <div class="logo " tr="tr_name">Matthew Merioles</div>
         <div class="hamburger-menu">
-
+          
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-
+            <br>
+            <img src="./assets/langtoggle.png" alt="Toggle icon" class="icon" onclick="translateDocument()" />
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()" tr="tr_about" >About</a></li>
                 <li><a href="#experience" onclick="toggleMenu()" tr="tr_experience" >Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()" tr="tr_projects" >Projects</a></li>
+                <li><a href='https://scrapbox.io/mattlab/' onclick="toggleMenu()" tr="tr_blog" >Blog</a></li>
                 <li><a href="#contact" onclick="toggleMenu()"  tr="tr_contact" >Contact</a></li>
             </div>
 
         </div>
     </nav>
+
     <section id="profile">
-        <div class="section__pic-container ">
-            <img src="./assets/placeholder.png" alt= "Matthew Merioles profile picture" />
+        <div class="section__pic-container">
+            <img src="./assets/matthew.jpg" alt= "Matthew Merioles profile picture" class=about-pic />
         </div>
 
         <div class="section__text">
@@ -88,6 +94,7 @@
           onclick="translateDocument()"
         />
     </section>
+
     <section id="about">
         <p class="section__text__p1 " tr="tr_get">Get To Know More</p>
         <h1 class="title " tr="tr_aboutme">About Me</h1>
@@ -109,7 +116,8 @@
                         class="icon"
                         />
                         <h3  tr="tr_experience">Experience</h3>
-                        <p  tr="tr_new">Recent Graduate </p>
+                        <p  tr="tr_new">3+ Years of Professional Internship Experience</p>
+                        
                     </div>
 
                     <div class="details-container">
@@ -345,10 +353,10 @@
                     <div class="btn-container">
                         <button
                         class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://github.com/'"
-                        tr="tr_github"
+                        onclick="location.href='https://scrapbox.io/mattlab/'"
+                        tr="tr_link"
                         >
-                        Github
+                        Link
                         </button>
                     </div>
                 </div>
@@ -364,10 +372,10 @@
                     <div class="btn-container">
                         <button
                         class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://github.com/'"
-                        tr="tr_github"
+                        onclick="location.href='https://scrapbox.io/mattlab/'"
+                        tr="tr_link"
                         >
-                        Github
+                        Link
                         </button>
                     </div>
                 </div>
@@ -383,10 +391,10 @@
                     <div class="btn-container">
                         <button
                         class="btn btn-color-2 project-btn "
-                        onclick="location.href='https://github.com/'"
-                        tr="tr_github"
+                        onclick="location.href='https://scrapbox.io/mattlab/'"
+                        tr="tr_link"
                         >
-                        Github
+                        Link
                         </button>
                     </div>
                 </div>
@@ -440,6 +448,7 @@
                   <li><a href="#about" onclick="toggleMenu()" tr="tr_about" >About</a></li>
                   <li><a href="#experience" onclick="toggleMenu()" tr="tr_experience" >Experience</a></li>
                   <li><a href="#projects" onclick="toggleMenu()" tr="tr_projects" >Projects</a></li>
+                  <li><a href='https://scrapbox.io/mattlab/' tr="tr_blog" >Blog</a></li>
                   <li><a href="#contact" onclick="toggleMenu()"  tr="tr_contact" >Contact</a></li>
                 </ul>
             </div>

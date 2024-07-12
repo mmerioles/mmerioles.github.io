@@ -51,7 +51,7 @@
         display: block;
     }
     
-    .arrow {
+    .downarrow, .uparrow, .translate {
         display: none;
     }
 
