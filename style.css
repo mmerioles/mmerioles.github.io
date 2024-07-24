@@ -72,9 +72,9 @@ a:hover{
 
 .hamburger-menu {
     position: fixed;
-    top: 30px; /* Adjust as needed */
-    right: 30px; /* Adjust as needed */
-    z-index: 10002; /* Ensure the hamburger icon is above other elements */
+    top: 2rem; /* Adjust as needed */
+    left: 2rem; /* Adjust as needed */
+    z-index: 10003; /* Ensure the hamburger icon is above other elements */
 }
 
 .hamburger-icon {
@@ -152,14 +152,6 @@ a:hover{
 .hamburger-icon span:last-child {
     transform: none;
 }
-
-
-
-
-
-
-
-
 
 /* Sections */
 
@@ -467,6 +459,7 @@ footer p {
 .fade-out-content {
     animation: fadeOutContent ease 0.5s;
     animation-fill-mode: forwards;
+    pointer-events: none;
 }
 
 .fade-in-content {
@@ -482,3 +475,4 @@ footer p {
     background-color: black;
     transform: none;
   }
+

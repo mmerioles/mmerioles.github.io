@@ -88,9 +88,11 @@ function translateDocument() {
     const newLang = currentLang === 'en' ? 'jp' : 'en';
 
     const elements = document.querySelectorAll('[tr]');
+    
 
     document.body.classList.remove('fade-in-content');
-    document.body.classList.add('fade-out-content');;
+    document.body.classList.add('fade-out-content');
+    
 
     setTimeout(() => {
         elements.forEach(element => {
@@ -99,11 +101,12 @@ function translateDocument() {
                 element.textContent = translations[newLang][key];
             }
         });
+        document.documentElement.setAttribute('lang', newLang);
 
         document.body.classList.remove('fade-out-content');
         document.body.classList.add('fade-in-content');
 
-        document.documentElement.setAttribute('lang', newLang);
+        
     }, 500);
 };
 
