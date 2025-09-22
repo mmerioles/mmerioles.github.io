@@ -14,24 +14,28 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 
-<body class="fade-in-content debug">
+<body class="fade-in-content">
     <nav class="container-nav">
       <ul>
         <li><a href="#about" tr="tr_about" >About</a></li>
         <li><a href="#projects" tr="tr_projects" >Projects</a></li>
-        <li><a href='https://scrapbox.io/mattlab/' tr="tr_notes" >Notes</a></li>
+        <li><a href='https://scrapbox.io/mattlab/' tr="tr_notes">Notes</a></li>
         <li><a href="#contact" tr="tr_contact" >Contact</a></li>
       </ul>
     </nav>
     
     <nav class="hamburger-menu">
+      <div class="container-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <br>
-        <img src="./assets/langtoggle.png" alt="Toggle icon" class="icon" onclick="translateDocument()" />
+        <div class="lang-icon">
+          <img src="./assets/langtoggle.png" alt="Toggle icon" class="icon" onclick="translateDocument()" />
+        </div>
+      </div>
+        
         <div class="menu-links">
             <li><a href="#about" onclick="toggleMenu()" tr="tr_about" >About</a></li>
             <li><a href="#projects" onclick="toggleMenu()" tr="tr_projects" >Projects</a></li>
