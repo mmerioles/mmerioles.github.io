@@ -1,525 +1,96 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
-
-    
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew Merioles</title>
-    <link rel="icon" type="image/x-icon" href="./assets/placeholder.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/switch.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 
-<body class="fade-in-content">
-    <nav id="desktop-nav">
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about" tr="tr_about" >About</a></li>
-                <li><a href="#experience" tr="tr_experience" >Experience</a></li>
-                <li><a href="#projects" tr="tr_projects" >Projects</a></li>
-                <li><a href='https://scrapbox.io/mattlab/' tr="tr_blog" >Blog</a></li>
-                <li><a href="#contact" tr="tr_contact" >Contact</a></li>
-            </ul>
-        </div>
+<body class="fade-in-content debug">
+    <nav class="container-nav">
+      <ul>
+        <li><a href="#about" tr="tr_about" >About</a></li>
+        <li><a href="#projects" tr="tr_projects" >Projects</a></li>
+        <li><a href='https://scrapbox.io/mattlab/' tr="tr_notes" >Notes</a></li>
+        <li><a href="#contact" tr="tr_contact" >Contact</a></li>
+      </ul>
     </nav>
     
-    <nav id = "hamburger-nav">
-        <div class="hamburger-menu">
-          
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <br>
-            <img src="./assets/langtoggle.png" alt="Toggle icon" class="icon" onclick="translateDocument()" />
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()" tr="tr_about" >About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()" tr="tr_experience" >Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()" tr="tr_projects" >Projects</a></li>
-                <li><a href='https://scrapbox.io/mattlab/' onclick="toggleMenu()" tr="tr_blog" >Blog</a></li>
-                <li><a href="#contact" onclick="toggleMenu()"  tr="tr_contact" >Contact</a></li>
-            </div>
-
+    <nav class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
+        <br>
+        <img src="./assets/langtoggle.png" alt="Toggle icon" class="icon" onclick="translateDocument()" />
+        <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()" tr="tr_about" >About</a></li>
+            <li><a href="#projects" onclick="toggleMenu()" tr="tr_projects" >Projects</a></li>
+            <li><a href='https://scrapbox.io/mattlab/' onclick="toggleMenu()" tr="tr_notes" >Notes</a></li>
+            <li><a href="#contact" onclick="toggleMenu()"  tr="tr_contact" >Contact</a></li>
+        </div>
+      </nav>
 
     <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/matthew.jpg" alt= "Matthew Merioles profile picture" class=about-pic />
-        </div>
-
-        <div class="section__text">
-            <p class="section__text__p1 " tr="tr_hello">Hello, I'm </p>
-            <h1  class="title " tr="tr_name">Matthew Merioles</h1>
-            <p class="section__text__p2 " tr="tr_engineer">Electrical Engineer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2 " tr="tr_resume" onclick="window.open('./assets/Resume_MMerioles.pdf')"> 
-                    Resume
-                </button>
-
-                <button class="btn btn-color-1 " tr="tr_contact" onclick="location.href='./#contact'"> 
-                    Contact
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" 
-                alt="LinkedIn Profile"
-                class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/mmerioles/'"/>
-
-                <img src="./assets/github.png" 
-                alt="My Github Profile"
-                class="icon" 
-                onclick="location.href='https://github.com/mmerioles'"/>
-            </div>
-        </div>
-        <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon downarrow"
-        onclick="location.href='./#about'"
-        />
-        <img
-          src="./assets/langtoggle.png"
-          alt="Toggle icon"
-          class="icon translate"
-          onclick="translateDocument()"
-        />
-    </section>
-
-    <section id="about">
-        <p class="section__text__p1 " tr="tr_get">Find Out More</p>
-        <h1 class="title " tr="tr_aboutme">About Me</h1>
-        <div class="section-container">
-
-            <div class="section__pic-container">
-                <img src="./assets/ski_cleanup.jpg"
-                alt="Profile Picture"
-                class="about-pic"
-                />
-            </div>
-
-            <div class = "about-details-container">
-                <div class="about-containers">
-
-                    <div class="details-container">
-                        <img src="./assets/experience.png" 
-                        alt="Experience icon"
-                        class="icon"
-                        />
-                        <h3  tr="tr_exp">Experience</h3>
-                        <p  tr="tr_new">3+ Professional Internship Experiences</p>
-                        
-                    </div>
-
-                    <div class="details-container">
-                        <img src="./assets/education.png" 
-                        alt="Education icon"
-                        class="icon"
-                        />
-                        <h3  tr="tr_edu">Education</h3>
-                        <p  tr="tr_deg">B.Sc. Electrical Engineering</p><p tr="tr_ucsd" >UC San Diego</p>
-                    </div>
-
-                </div>
-
-                <div class="text-container">
-                    <p  tr="tr_long">
-                        I'm a passionate individual interested in Data Networks and cool projects. I'm currently working at Northrop Grumman as an Associate Electronics Engineer, where I have built 
-                        valuable experience designing scalable and robust network architecture and applications. In my free time, I enjoy composing video game and japanese alt rock music. 
-                    </p>
-                </div>
-            </div>
-        </div>
-        <img
-        src="./assets/uparrow.png"
-        alt="Arrow icon"
-        class="icon uparrow"
-        onclick="location.href='./#profile'"
-        />
-        <img
-        src="./assets/uparrow.png"
-        alt="Arrow icon"
-        class="icon uparrow"
-        onclick="location.href='./#'"
-        />
-        <img src="./assets/arrow.png" 
-        alt="Arrow icon" 
-        class="icon downarrow"
-        onclick="location.href='./#experience'"
-        />
-        <img
-          src="./assets/langtoggle.png"
-          alt="Toggle icon"
-          class="icon translate"
-          onclick="translateDocument()"
-        />
-        
-    </section>
-    
-    <section id="experience">
-        <p class="section__text__p1 " tr="tr_explore">An Overview of My</p>
-        <h1 class="title " tr="tr_skill">Experience</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <h2 class="experience-sub-title " tr="tr_programming">Core Competencies and Tools</h2>
-              <div class="article-container">
-                <article>
-                  <img
-                    src="./assets/c.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>C/C++</h3>
-                    <p tr="tr_proficient" >Proficient</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/python-5.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Python</h3>
-                    <p tr="tr_proficient"  >Proficient</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/matlab.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>MATLAB</h3>
-                    <p tr="tr_proficient" >Proficient</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/mysql.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>MySQL</h3>
-                    <p tr="tr_intermediate" >Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/verilog.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Verilog</h3>
-                    <p tr="tr_intermediate" >Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/labview.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>LabVIEW</h3>
-                    <p tr="tr_intermediate" >Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/html.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>HTML</h3>
-                    <p tr="tr_intermediate" >Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/css.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>CSS</h3>
-                    <p tr="tr_intermediate" >Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/js.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>JavaScript</h3>
-                    <p tr="tr_intermediate" >Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/react.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>React</h3>
-                    <p tr="tr_basic" >Basic</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/firebase.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Firebase</h3>
-                    <p tr="tr_basic" >Basic</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/router.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>CML</h3>
-                    <p tr="tr_proficient" >Proficient</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/wireshark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Wireshark</h3>
-                    <p tr="tr_proficient" >Proficient</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/tux.svg"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Linux</h3>
-                    <p tr="tr_proficient">Proficient</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/network.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Mininet</h3>
-                    <p tr="tr_proficient" >Proficient</p>
-                  </div>
-                </article>
-                <article>
-                    <img
-                      src="./assets/docker.svg"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>Docker</h3>
-                      <p tr="tr_proficient" >Proficient</p>
-                    </div>
-                  </article>
-                  <article>
-                    <img
-                      src="./assets/jira.svg"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>Jira</h3>
-                      <p tr="tr_proficient" >Proficient</p>
-                    </div>
-                  </article>
-                  <article>
-                    <img
-                      src="./assets/ansible.svg"
-                      alt="Experience icon"
-                      class="icon"
-                    />
-                    <div>
-                      <h3>Ansible</h3>
-                      <p tr="tr_intermediate" >Intermediate</p>
-                    </div>
-                  </article>
-                  
-              </div>
-            </div>
+      <div class="container-hero">
+        <div class="container-bundle">
+          <h1 tr="tr_name">Matthew Merioles</h1>
+          <h2 tr="tr_engineer">Electrical Engineer</h2>
+          <h3 tr="tr_engineer">*PAGE WIP*</h3>
+          <div class ="container-buttons">
+            <button> Resume </button>
+            <button> GitHub </button>
           </div>
         </div>
-        <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon downarrow"
-        onclick="location.href='./#projects'"
-        />
-        <img
-        src="./assets/uparrow.png"
-        alt="Arrow icon"
-        class="icon uparrow"
-        onclick="location.href='./#about'"
-        />
-        <img
-          src="./assets/langtoggle.png"
-          alt="Toggle icon"
-          class="icon translate"
-          onclick="translateDocument()"
-        />
-    </section>
+      </div>
+    </section>    
 
+    <section id="about">
+        <h1 class="title " tr="tr_about">About</h1>
+        <p tr="tr_deg">B.S. Electrical Engineering</p><p tr="tr_ucsd" >UC San Diego</p>
+        <p tr="tr_long">I like data center networks. In my free time, I create video game and vocaloid music.</p>
+    </section>
+    
     <section id="projects">
-        <p class="section__text__p1 " tr="tr_browse">My Recent</p>
         <h1 class="title " tr="tr_projects">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img
-                        src="./assets/tatacon.jpg"
-                        alt="Project 1"
-                        class="project-img"
-                        />
-                    </div>
-                    
-                    <h2 class="experience-sub-title project-title " tr="tr_project_1">Tatacon Project</h2>
-                    <div class="btn-container">
-                        <button
-                        class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://scrapbox.io/mattlab/%E3%82%BF%E3%82%BF%E3%82%B3%E3%83%B3%E4%BD%9C%E6%88%90%EF%BC%88WIP%EF%BC%89'"
-                        tr="tr_link"
-                        >
-                        Link
-                        </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img
-                        src="./assets/database.png"
-                        alt="Project 2"
-                        class="project-img"
-                        />
-                    </div>
-                    <h2 class="experience-sub-title project-title " tr="tr_project_2">RDBMS from Scratch</h2>
-                    <div class="btn-container">
-                        <button
-                        class="btn btn-color-2 project-btn"
-                        onclick="location.href='https://scrapbox.io/mattlab/RDBMS_from_Scratch'"
-                        tr="tr_link"
-                        >
-                        Link
-                        </button>
-                    </div>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img
-                        src="./assets/jetson.jpg"
-                        alt="Project 3"
-                        class="project-img"
-                        />
-                    </div>
-                     
-                      <h2 class="experience-sub-title project-title " tr="tr_project_3">Jetson Nano Autonomous Vehicle</h2>
-                      <div class="btn-container">
-                          <button
-                          class="btn btn-color-2 project-btn "
-                          onclick="location.href='https://scrapbox.io/mattlab/Jetson_Nano_Autonomous_Vehicle'"
-                          tr="tr_link"
-                          >
-                          Link
-                          </button>
-                      </div>
-                    
-                </div>
-            </div>
+        <div class="container-projects">
+          <ul>
+            <li class="project">1</li>
+            <li class="project">2</li>
+            <li class="project">3</li>
+            <li class="project">4</li>
+            <li class="project">5</li>
+          </ul>
         </div>
-        <img
-        src="./assets/uparrow.png"
-        alt="Arrow icon"
-        class="icon uparrow"
-        onclick="location.href='./#experience'"
-        />
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon downarrow"
-          onclick="location.href='./#contact'"
-        />
-        <img
-          src="./assets/langtoggle.png"
-          alt="Toggle icon"
-          class="icon translate"
-          onclick="translateDocument()"
-        />
-  
     </section>
 
     <section id="contact">
-        <p class="section__text__p1 " tr="tr_touch">Connect With Me</p>
         <h1 class="title " tr="tr_contact">Contact</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" 
-                alt="Email icon" 
-                class="icon contact-icon email-icon"
-                href="mailto:matthewmerioles@yahoo.com"/>
-                <p><a href="mailto:matthewmerioles@yahoo.com">matthewmerioles@yahoo.com</a></p>
+        <div class="container">
+            <div>
+                <p><a href="mailto:matthewmerioles@yahoo.com" tr="tr_mail">Email</a></p>
             </div>
 
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" 
-                alt="LikedIn icon" 
-                class="icon contact-icon"
-                onclick="location.href='https://www.linkedin.com/in/mmerioles/'"/>
+            <div>
                 <p><a href="https://www.linkedin.com/in/mmerioles"  tr="tr_linkedin">LinkedIn</a></p>
             </div>
 
-        </div>
+            <div>
+                <p><a onclick="location.href='./#'" tr="tr_return">Return</a></p>
+            </div>
+        </div> 
     </section>
 
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                  <li><a href="#about" tr="tr_about" >About</a></li>
-                  <li><a href="#experience"  tr="tr_experience" >Experience</a></li>
-                  <li><a href="#projects"  tr="tr_projects" >Projects</a></li>
-                  <li><a href='https://scrapbox.io/mattlab/' tr="tr_blog" >Blog</a></li>
-                  <li><a href="#contact"  tr="tr_contact" >Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p  tr="tr_copyright">Copyright &#169; 2024 Matthew Merioles. All Rights Reserved.</p>
+    <footer> 
     </footer>
     <script src="script.js"></script>
 
