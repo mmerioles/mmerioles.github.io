@@ -20,6 +20,34 @@ html, body {
     padding: 0;
     box-sizing: border-box;
 }
+body {
+  margin: 0;
+  background: #e5e5e5;   /* light gray like the example */
+  font-family: "Klee One", system-ui, sans-serif;
+}
+
+/* Full-screen background canvas behind everything */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;           /* behind your content */
+  pointer-events: none;  /* don't block clicks */
+}
+
+/* Optional: dark base to make the 3D pop */
+body {
+  background: radial-gradient(circle at top, #ffffff 0%, #ffffff 60%, #f8f8f8 100%);
+}
+
+/* Make sure your main content sits above the background */
+.container-nav,
+#profile,
+footer {
+  position: relative;
+  z-index: 1;
+}
 
 body {
     font-family: "Klee One", cursive;
@@ -38,8 +66,9 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: beige;
+  background-color: transparent;
 }
+
 
 .container-hero {
     height: 80vh;
