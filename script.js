@@ -1,4 +1,3 @@
-
 // Taken from https://codepen.io/lucasdellabella
 let styleSheet = null;
 

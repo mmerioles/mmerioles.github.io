@@ -19,29 +19,25 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100%;
 }
+
 body {
   margin: 0;
   background: #e5e5e5;   /* light gray like the example */
   font-family: "Klee One", system-ui, sans-serif;
 }
 
-/* Full-screen background canvas behind everything */
 #bg-canvas {
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;           /* behind your content */
-  pointer-events: none;  /* don't block clicks */
+  z-index: -1;           
+  pointer-events: none;  
 }
 
-/* Optional: dark base to make the 3D pop */
-body {
-  background: radial-gradient(circle at top, #ffffff 0%, #ffffff 60%, #f8f8f8 100%);
-}
 
-/* Make sure your main content sits above the background */
 .container-nav,
 #profile,
 footer {
@@ -50,16 +46,18 @@ footer {
 }
 
 body {
+    margin: 0;
+    background: radial-gradient(circle at top, #ffffff 0%, #ffffff 60%, #f8f8f8 100%);
     font-family: "Klee One", cursive;
     animation: fadeInPage ease 3s;
     animation-fill-mode: forwards;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    min-height: 100vh;       
 }
 
 section {
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   display: flex;
@@ -101,6 +99,7 @@ section {
     height: auto;
     width: auto;
     padding: 1rem 1.3rem;
+    border-radius: 12px;
 }
 
 .container-buttons{
@@ -164,14 +163,8 @@ p{
     color:rgb(85, 85, 85);
 }
 
-/* Transitions */
-
-a, .btn{
-    transition: all 300ms ease;
-}
 
 /* Desktop Nav */
-
 
 a {
     color: black;
@@ -186,35 +179,6 @@ a:hover{
     text-decoration-color: rgb(181,181,181);
 }
 
-/* Hamburger Menu */
-#hamburger-nav {
-    display: none;
-}
-
-.hamburger-menu {
-    position: fixed;
-    top: 1.5rem; 
-    left: 1rem; 
-    z-index: 10003; 
-}
-
-.hamburger-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 1.5rem;
-    width: 2rem;
-    cursor: pointer;
-    z-index: 10003; /* Ensure the hamburger icon is above the menu */
-}
-
-.hamburger-icon span {
-  display: block;
-  width: 100%;
-  height: 3px;        /* fixed thickness */
-  background: black;
-  border-radius: 2px;
-}
 
 .menu-links {
     position: fixed;
@@ -233,9 +197,6 @@ a:hover{
     z-index: 10000; 
 }
 
-.menu-links.open {
-    transform: translateY(0); 
-}
 
 .menu-links a {
     display: block;
