@@ -118,13 +118,14 @@ section {
     padding: 0;
 }
 
-.container-nav{
-    height: 8vh;
-    width: 100%;
+.container-nav {
+    height: 8vh;              
     display: flex;
     justify-content: center;
+    align-items: center;       
     background-color: #F8F9FA;
     font-size: 15pt;
+    flex: 0 0 auto;            
 }
 
 .container-menu{
@@ -250,10 +251,13 @@ a:hover{
 
 .about-header {
   text-align: center;
+  margin-bottom: 0.25rem;
 }
 
-.about-header .title {
-  margin-bottom: 0.25rem;
+.title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0 0 0.25rem 0;
 }
 
 .about-header p {
@@ -366,3 +370,133 @@ a:hover{
     background-color: black;
     transform: none;
   }
+
+
+@media (max-width: 600px) {
+  #about {
+    padding: 2rem 1rem;
+  }
+
+  .about-layout {
+    gap: 1.5rem;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: stretch;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .timeline-date {
+    display: none;      
+  }
+
+  .timeline-item::after {
+    display: none;
+  }
+
+  .timeline-panel {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+/* PROJECTS */
+
+/* Projects layout */
+#projects {
+  position: relative;
+  padding: 3rem 1.5rem;
+  align-items: center; /* section is already a flex container */
+}
+
+.projects-layout {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projects-header {
+  text-align: center;
+}
+
+.projects-subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.projects-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-item {
+  margin: 0;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-card {
+  background-color: #F8F9FA;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.project-title {
+  margin: 0 0 0.1rem 0;
+  font-size: 0.98rem;
+}
+
+.project-meta {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.project-text {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  #projects {
+    padding: 2rem 1rem;
+  }
+}
+
+.projects-more {
+  margin: 0.5rem auto 0;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background-color: #F8F9FA;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  line-height: 1;
+}
+
+.projects-more:hover {
+  background-color: #f0f0f0;
+}
