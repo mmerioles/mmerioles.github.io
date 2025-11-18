@@ -374,7 +374,6 @@ const makeSpark = (center, rotation) => {
       }
     }
 
-    // After the flow is done, reset colors shortly after last arrival
     if (!activeFlow &&
         lastArrivalTime !== 0 &&
         now - lastArrivalTime > RESET_AFTER) {
@@ -387,11 +386,34 @@ const makeSpark = (center, rotation) => {
 
   animate();
 
-  // ---- Resize handling ----
   window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
 })();
+
+async function setLastUpdated() {
+  const el = document.getElementById('last-updated');
+  if (!el) return;
+
+  try {
+    const res = await fetch('https://api.github.com/repos/mmerioles/mmerioles.github.io');
+    if (!res.ok) throw new Error('GitHub API error');
+
+    const repo = await res.json();
+    const lastUpdated = new Date(repo.pushed_at);
+    const formatted = lastUpdated.toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+
+    el.textContent = `Last updated — ${formatted}`;
+  } catch (err) {
+    el.textContent = 'Last updated — GitHub unavailable';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', setLastUpdated);
 
