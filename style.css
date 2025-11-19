@@ -24,7 +24,7 @@
 
   body {
     margin: 0;
-    background: #e5e5e5;   /* light gray like the example */
+    background: #e5e5e5;
     font-family: "Klee One", system-ui, sans-serif;
   }
 
@@ -71,6 +71,9 @@
     align-items: center;
     background-color: transparent;
   }
+
+
+
 
 
   .container-hero {
@@ -341,6 +344,10 @@
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
+
+    opacity: 0;
+    transform: translateX(-12px);
+    animation: timelineDateIn 0.5s ease-out forwards;
   }
 
 
@@ -360,6 +367,10 @@
     padding: 0.75rem 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    opacity: 0;
+    transform: translateY(8px);
+    animation: panelFadeIn 0.5s ease-out forwards;
   }
 
   .timeline-panel:hover {
@@ -447,38 +458,39 @@
 
 
   @media (max-width: 600px) {
-    #about {
-      padding: 2rem 1rem;  
+  #about {
+      padding: 2rem 1rem;
     }
 
-    .about-layout {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      gap: 1.5rem;
-    }
-
-    .timeline-item {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0.5rem;
-    }
-
-    .timeline-date {
-      display: none;
-    }
-
-    .timeline-item::after {
-      display: none;
-    }
-
-    .timeline-panel {
-      flex: 1 1 auto;
-      width: 100%;
-      box-sizing: border-box;
-      margin: 0 0.4rem;  
-    }
+  .about-layout {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 1.5rem;
   }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .timeline-date {
+    display: none;
+  }
+
+  .timeline-item::after {
+    display: none;
+  }
+
+  .timeline-panel {
+    flex: 1 1 auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;              
+  }
+}
+
 
   /* PROJECTS */
 
@@ -532,6 +544,10 @@
     padding: 0.75rem 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    opacity: 0;
+    transform: translateY(8px);
+    animation: panelFadeIn 0.5s ease-out forwards;
   }
 
   .project-card:hover {
@@ -611,6 +627,10 @@
     padding: 1rem 1.25rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    opacity: 0;
+    transform: translateY(8px);
+    animation: panelFadeIn 0.5s ease-out forwards;
   }
 
   .contact-card:hover {
@@ -628,3 +648,45 @@
       margin: 0 0.25rem; 
     }
   }
+
+  @keyframes timelineDateIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes panelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-list .timeline-item:nth-child(1) .timeline-panel { animation-delay: 0.15s; }
+.timeline-list .timeline-item:nth-child(2) .timeline-panel { animation-delay: 0.30s; }
+.timeline-list .timeline-item:nth-child(3) .timeline-panel { animation-delay: 0.45s; }
+.timeline-list .timeline-item:nth-child(4) .timeline-panel { animation-delay: 0.60s; }
+.timeline-list .timeline-item:nth-child(5) .timeline-panel { animation-delay: 0.75s; }
+
+.timeline-list .timeline-item:nth-child(1) .timeline-date { animation-delay: 0.05s; }
+.timeline-list .timeline-item:nth-child(2) .timeline-date { animation-delay: 0.20s; }
+.timeline-list .timeline-item:nth-child(3) .timeline-date { animation-delay: 0.35s; }
+.timeline-list .timeline-item:nth-child(4) .timeline-date { animation-delay: 0.50s; }
+.timeline-list .timeline-item:nth-child(5) .timeline-date { animation-delay: 0.65s; }
+
+.projects-list .project-item:nth-child(1) .project-card { animation-delay: 0.20s; }
+.projects-list .project-item:nth-child(2) .project-card { animation-delay: 0.35s; }
+.projects-list .project-item:nth-child(3) .project-card { animation-delay: 0.50s; }
+.projects-list .project-item:nth-child(4) .project-card { animation-delay: 0.65s; }
+.projects-list .project-item:nth-child(5) .project-card { animation-delay: 0.80s; }
+
+#contact .contact-card { animation-delay: 0.15s;}
+
