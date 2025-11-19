@@ -624,10 +624,13 @@
   .contact-card {
     background-color: #F8F9FA;
     border-radius: 12px;
-    padding: 1rem 1.25rem;
+    padding: 1rem 0.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     transform: translateY(8px);
     animation: panelFadeIn 0.5s ease-out forwards;
