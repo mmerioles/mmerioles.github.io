@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects — Matthew Merioles</title>
+    <title>Projects &mdash; Matthew Merioles</title>
     <link rel="icon" type="image/svg+xml" href="./assets/switch.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
@@ -25,91 +25,66 @@
     </nav>
 
     <section id="projects">
-  <div class="projects-layout">
-    <header class="projects-header">
-      <h1 class="title" tr="tr_projects">Projects</h1>
-      <p class="projects-subtitle">
-        A few networking and systems projects I’ve worked on over time.
-      </p>
-    </header>
+      <div class="projects-layout">
+        <header class="projects-header">
+          <h1 class="title" tr="tr_projects">Projects</h1>
+          <p class="projects-subtitle">
+            A few projects in networking, systems, and software design.
+          </p>
+        </header>
 
-    <ul class="projects-list">
-      <li class="project-item">
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
-          <div class="project-card">
-            <h2 class="project-title">MIMO Mesh Network Capacity Testbed</h2>
-            <p class="project-meta">Python · iperf3 · Linux · Wi-Fi</p>
-            <p class="project-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec arcu
-              ultricies, pretium erat sed, efficitur eros. Quisque dignissim mi vel
-              volutpat feugiat.
-            </p>
-          </div>
-        </a>
-      </li>
+        <ul class="projects-list">
+          <li class="project-item">
+            <div class="project-card">
+              <h2 class="project-title">802.11 OFDM PHY Implementation</h2>
+              <p class="project-meta">Python | IEEE 802.11 | DSP | QPSK</p>
+              <p class="project-text">
+                Implemented a Python-based IEEE 802.11 OFDM baseband chain (STF/LTF preambles, IFFT/FFT, cyclic prefix, QPSK mapping) and simulated channel impairments including attenuation, phase rotation, carrier-frequency offset, and AWGN.
+              </p>
+              <p class="project-text">
+                Designed self-/cross-correlation algorithms for packet detection and timing synchronization, then used LTF-based per-subcarrier channel estimation and equalization to recover 4k+ transmitted bits with zero BER.
+              </p>
+            </div>
+          </li>
 
-      <li class="project-item">
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
-          <div class="project-card">
-            <h2 class="project-title">Data Center Latency & Throughput Dashboard</h2>
-            <p class="project-meta">Grafana · Prometheus · Python exporters</p>
-            <p class="project-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis
-              magna vitae mi bibendum scelerisque. Donec aliquet mauris sed risus
-              tincidunt, eget fringilla lacus fermentum.
-            </p>
-          </div>
-        </a>
-      </li>
+          <li class="project-item">
+            <div class="project-card">
+              <h2 class="project-title">BitTorrent Simulation</h2>
+              <p class="project-meta">Python | Distributed Systems | NetworkX | Matplotlib</p>
+              <p class="project-text">
+                Developed a Python-based BitTorrent simulator modeling tit-for-tat piece exchange, optimistic unchoking, and peer churn across hundreds of nodes, visualized with NetworkX and Matplotlib.
+              </p>
+            </div>
+          </li>
 
-      <li class="project-item">
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
-          <div class="project-card">
-            <h2 class="project-title">Automated Config Compliance for Network Devices</h2>
-            <p class="project-meta">Python · Ansible · Cisco IOS</p>
-            <p class="project-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              vitae urna interdum, varius mi sit amet, rhoncus purus.
-            </p>
-          </div>
-        </a>
-      </li>
+          <li class="project-item">
+            <div class="project-card">
+              <h2 class="project-title">Tonnetz Graph Analysis and Generative MIDI System</h2>
+              <p class="project-meta">Python | NumPy | NetworkX | Matplotlib | Mido | FluidSynth</p>
+              <p class="project-text">
+                Built a Python pipeline that parses MIDI into a 48-note transition matrix (C2-B5), constructs a weighted directed Tonnetz graph, and analyzes tonal structure with centrality metrics and graph statistics.
+              </p>
+              <p class="project-text">
+                Implemented an interactive visualization with real-time melody/chord playback overlays and BPM controls, then generated new melodies via centrality-biased random walks with MIDI export for baseline comparison.
+              </p>
+            </div>
+          </li>
 
-      <li class="project-item">
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
-          <div class="project-card">
-            <h2 class="project-title">Home Lab Anycast DNS Experiment</h2>
-            <p class="project-meta">BGP · Linux · Containers</p>
-            <p class="project-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at magna
-              eget justo consequat pellentesque. In sit amet nisl velit.
-            </p>
-          </div>
-        </a>
-      </li>
-
-      <li class="project-item">
-        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
-          <div class="project-card">
-            <h2 class="project-title">Wireless Link SNR Analyzer</h2>
-            <p class="project-meta">Python · iperf3 · Matplotlib</p>
-            <p class="project-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tristique
-              massa a risus dictum, ac tristique augue ornare.
-            </p>
-          </div>
-        </a>
-      </li>
-    </ul>
-
-    <button class="projects-more" type="button">
-      ...
-    </button>
-
-
-  </div>
-</section>
-
+          <li class="project-item">
+            <div class="project-card">
+              <h2 class="project-title">Shumi Productivity and Practice Tracker</h2>
+              <p class="project-meta">Python | PyQt6 | MVC | DuckDB | Supabase | D3.js</p>
+              <p class="project-text">
+                Built a desktop productivity app using an MVC-style architecture with dedicated Models, Views, and an ApplicationController that routes UI signals through an event bus and manager layer for clean separation of concerns.
+              </p>
+              <p class="project-text">
+                Implemented session tracking, auth, and sync workflows with local DuckDB storage plus Supabase cloud integration, and embedded interactive heatmap/chart components via QWebEngine + D3.js for progress visualization.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <footer></footer>
     <script src="script.js"></script>

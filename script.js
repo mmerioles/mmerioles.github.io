@@ -415,5 +415,39 @@ async function setLastUpdated() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', setLastUpdated);
+function updateCurrentRoleDuration() {
+  const el = document.getElementById('current-role-duration');
+  if (!el) return;
+
+  const startRaw = el.dataset.start;
+  if (!startRaw) return;
+
+  const start = new Date(startRaw);
+  if (Number.isNaN(start.getTime())) return;
+
+  const now = new Date();
+  let months =
+    (now.getFullYear() - start.getFullYear()) * 12 +
+    (now.getMonth() - start.getMonth());
+
+  if (now.getDate() < start.getDate()) {
+    months -= 1;
+  }
+
+  months = Math.max(0, months);
+
+  if (months >= 12) {
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+    el.textContent = `${years} yr ${remainingMonths} mos`;
+    return;
+  }
+
+  el.textContent = `${months} mos`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setLastUpdated();
+  updateCurrentRoleDuration();
+});
 
