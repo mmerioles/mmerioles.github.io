@@ -387,7 +387,7 @@
 
   @media (max-width: 600px) {
     #about {
-      padding: 2rem 1rem;        /
+      padding: 2rem 1rem;
     }
 
     .about-layout {
@@ -477,12 +477,27 @@
   }
 
   .timeline-item {
+    position: relative;
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
   }
 
   .timeline-date {
+    position: absolute;
+    z-index: 1;
+    top: 0.9rem;
+    right: 1rem;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 0.35rem;
+    padding: 0;
+    white-space: nowrap;
+    transform: none;
+  }
+
+  .timeline-duration {
     display: none;
   }
 
@@ -495,6 +510,10 @@
     width: 100%;
     box-sizing: border-box;
     margin: 0;              
+  }
+
+  .timeline-role {
+    padding-right: 9rem;
   }
 }
 
