@@ -115,7 +115,8 @@ const makeSpark = (center, rotation) => {
     0.1,
     1000
   );
-  camera.position.set(0, 0, 35);
+  // Keep the topology prominent behind the home content.
+  camera.position.set(0, 0, 31.5);
 
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
@@ -450,4 +451,3 @@ document.addEventListener('DOMContentLoaded', () => {
   setLastUpdated();
   updateCurrentRoleDuration();
 });
-

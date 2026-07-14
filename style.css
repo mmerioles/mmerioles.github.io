@@ -126,8 +126,15 @@
       padding: 0;
   }
 
+  .container-nav a {
+      display: block;
+      padding: 0.2rem 0.35rem;
+  }
+
   .container-nav {
-      height: 8vh;              
+      box-sizing: border-box;
+      min-height: 4.5rem;
+      padding: 0.75rem 1rem;
       display: flex;
       justify-content: center;
       align-items: center;       
@@ -719,4 +726,3 @@
 .projects-list .project-item:nth-child(5) .project-card { animation-delay: 0.80s; }
 
 #contact .contact-card { animation-delay: 0.15s;}
-
