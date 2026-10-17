@@ -726,22 +726,44 @@
   }
 }
 
+/* Cards appear top to bottom. Each one needs its own delay, or it shows up first. */
 .timeline-list .timeline-item:nth-child(1) .timeline-panel { animation-delay: 0.15s; }
 .timeline-list .timeline-item:nth-child(2) .timeline-panel { animation-delay: 0.30s; }
 .timeline-list .timeline-item:nth-child(3) .timeline-panel { animation-delay: 0.45s; }
 .timeline-list .timeline-item:nth-child(4) .timeline-panel { animation-delay: 0.60s; }
 .timeline-list .timeline-item:nth-child(5) .timeline-panel { animation-delay: 0.75s; }
+.timeline-list .timeline-item:nth-child(6) .timeline-panel { animation-delay: 0.90s; }
+.timeline-list .timeline-item:nth-child(7) .timeline-panel { animation-delay: 1.05s; }
+.timeline-list .timeline-item:nth-child(8) .timeline-panel { animation-delay: 1.20s; }
+.timeline-list .timeline-item:nth-child(9) .timeline-panel { animation-delay: 1.35s; }
+.timeline-list .timeline-item:nth-child(10) .timeline-panel { animation-delay: 1.50s; }
+.timeline-list .timeline-item:nth-child(11) .timeline-panel { animation-delay: 1.65s; }
+.timeline-list .timeline-item:nth-child(12) .timeline-panel { animation-delay: 1.80s; }
 
 .timeline-list .timeline-item:nth-child(1) .timeline-date { animation-delay: 0.05s; }
 .timeline-list .timeline-item:nth-child(2) .timeline-date { animation-delay: 0.20s; }
 .timeline-list .timeline-item:nth-child(3) .timeline-date { animation-delay: 0.35s; }
 .timeline-list .timeline-item:nth-child(4) .timeline-date { animation-delay: 0.50s; }
 .timeline-list .timeline-item:nth-child(5) .timeline-date { animation-delay: 0.65s; }
+.timeline-list .timeline-item:nth-child(6) .timeline-date { animation-delay: 0.80s; }
+.timeline-list .timeline-item:nth-child(7) .timeline-date { animation-delay: 0.95s; }
+.timeline-list .timeline-item:nth-child(8) .timeline-date { animation-delay: 1.10s; }
+.timeline-list .timeline-item:nth-child(9) .timeline-date { animation-delay: 1.25s; }
+.timeline-list .timeline-item:nth-child(10) .timeline-date { animation-delay: 1.40s; }
+.timeline-list .timeline-item:nth-child(11) .timeline-date { animation-delay: 1.55s; }
+.timeline-list .timeline-item:nth-child(12) .timeline-date { animation-delay: 1.70s; }
 
 .projects-list .project-item:nth-child(1) .project-card { animation-delay: 0.20s; }
 .projects-list .project-item:nth-child(2) .project-card { animation-delay: 0.35s; }
 .projects-list .project-item:nth-child(3) .project-card { animation-delay: 0.50s; }
 .projects-list .project-item:nth-child(4) .project-card { animation-delay: 0.65s; }
 .projects-list .project-item:nth-child(5) .project-card { animation-delay: 0.80s; }
+.projects-list .project-item:nth-child(6) .project-card { animation-delay: 0.95s; }
+.projects-list .project-item:nth-child(7) .project-card { animation-delay: 1.10s; }
+.projects-list .project-item:nth-child(8) .project-card { animation-delay: 1.25s; }
+.projects-list .project-item:nth-child(9) .project-card { animation-delay: 1.40s; }
+.projects-list .project-item:nth-child(10) .project-card { animation-delay: 1.55s; }
+.projects-list .project-item:nth-child(11) .project-card { animation-delay: 1.70s; }
+.projects-list .project-item:nth-child(12) .project-card { animation-delay: 1.85s; }
 
 #contact .contact-card { animation-delay: 0.15s;}
